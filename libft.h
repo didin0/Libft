@@ -6,7 +6,7 @@
 /*   By: mabbadi <mabbadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 14:10:02 by mabbadi           #+#    #+#             */
-/*   Updated: 2023/04/14 15:35:03 by mabbadi          ###   ########.fr       */
+/*   Updated: 2023/09/26 16:29:51 by mabbadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 
 typedef struct s_list
 {
-	void			*content;
+	char			*content;
+	int				num;
+	int				index;
 	struct s_list	*next;
 }	t_list;
+
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
