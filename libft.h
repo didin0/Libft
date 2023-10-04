@@ -6,7 +6,7 @@
 /*   By: mabbadi <mabbadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 14:10:02 by mabbadi           #+#    #+#             */
-/*   Updated: 2023/09/26 16:29:51 by mabbadi          ###   ########.fr       */
+/*   Updated: 2023/10/04 19:27:05 by mabbadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 
 typedef struct s_list
 {
-	char			*content;
-	int				num;
+	void			*content;
 	int				index;
 	struct s_list	*next;
 }	t_list;
@@ -33,7 +32,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *), int type);
 int		ft_lstsize(t_list *lst);
 
 void	ft_bzero(void *s, size_t n);
