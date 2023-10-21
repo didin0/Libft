@@ -6,7 +6,7 @@
 /*   By: mabbadi <mabbadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 17:03:38 by mabbadi           #+#    #+#             */
-/*   Updated: 2023/04/19 17:36:21 by mabbadi          ###   ########.fr       */
+/*   Updated: 2023/10/13 15:19:29 by mabbadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (src[j] && (dstlen + j) < dstsize)
 		dst[i++] = src[j++];
 	if ((dstlen + j) == dstsize && dstlen < dstsize)
-			dst[--i] = '\0';
+		dst[--i] = '\0';
 	else
 		dst[i] = '\0';
 	return (srclen + dstlen);
